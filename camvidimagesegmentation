@@ -1,0 +1,112 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPSWfbAzlmCCqe8p408kCAL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/patchu-madathil/FastAI/blob/master/camvidimagesegmentation\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zYufQgeQZq6U",
+        "colab_type": "text"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "H_6H-s23ZspJ",
+        "colab_type": "text"
+      },
+      "source": [
+        "Camvid Image Segmentation\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ZRiAC-PaZzqn",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 102
+        },
+        "outputId": "e9ca9f66-7f00-4d1f-ccbf-4efd52925ac1"
+      },
+      "source": [
+        "\n",
+        "%reload_ext autoreload\n",
+        "%autoreload 2\n",
+        "%matplotlib inline\n",
+        "\n",
+        "from fastai.vision import *\n",
+        "from fastai.callbacks.hooks import *\n",
+        "from fastai.utils.mem import *\n",
+        "\n",
+        "path = untar_data(URLs.CAMVID)\n",
+        "path.ls()"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Downloading https://s3.amazonaws.com/fast-ai-imagelocal/camvid.tgz\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/html": [
+              ""
+            ],
+            "text/plain": [
+              "<IPython.core.display.HTML object>"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          }
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[PosixPath('/root/.fastai/data/camvid/images'),\n",
+              " PosixPath('/root/.fastai/data/camvid/codes.txt'),\n",
+              " PosixPath('/root/.fastai/data/camvid/valid.txt'),\n",
+              " PosixPath('/root/.fastai/data/camvid/labels')]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 1
+        }
+      ]
+    }
+  ]
+}
